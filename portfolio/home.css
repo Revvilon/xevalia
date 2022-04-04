@@ -1,0 +1,275 @@
+body {
+  background: var(--main);
+  margin: 0;
+  overflow-x: hidden;
+  display: grid;
+  justify-content: center;
+}
+.first-cont {
+  justify-self: center;
+  color: white;
+  width: 70vw;
+  height: 100vh;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.first-cont .right {
+  justify-self: right;
+}
+
+.first-cont .left p {
+  font-size: 1.25em;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  padding-right: 3em;
+}
+
+.first-cont .left span {
+  color: var(--second);
+  font-weight: 700;
+}
+
+.first-cont .left h1 {
+  font-size: 4em;
+  margin: 0;
+  margin-bottom: -0.4em;
+}
+
+.first-cont img {
+  width: 20vw;
+  min-width: 10em;
+  max-width: 20em;
+  border-radius: 50%;
+  border: 12px solid var(--main);
+  box-shadow: 20px 20px 0px var(--shadows);
+}
+
+.first-cont .left .skills {
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+.first-cont .left .skills p {
+  margin: 0;
+  color: hsl(230, 100%, 92%);
+  font-weight: 500;
+}
+
+.first-cont .left a {
+  text-decoration: none;
+  color: var(--second);
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+i {
+  margin-left: 20px;
+}
+
+.projects {
+  width: 70vw;
+  padding-top: 150px;
+  height: fit-content;
+  justify-self: center;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: 1fr;
+}
+
+.projects img {
+  width: 100%;
+  border: 6px solid var(--main);
+  box-shadow: 20px 20px 0px var(--shadows);
+}
+
+.projects img:nth-of-type(1) {
+  transform:
+}
+
+.projects .top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+
+  color: white;
+
+  grid-gap: 4em;
+}
+
+.projects .top span {
+  color: var(--second);
+}
+
+.projects .top p {
+  opacity: 0.5;
+  font-size: 1.25em;
+  margin: 0;
+}
+
+.projects .top h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.first-cont .left a {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.scroll {
+  position: relative;
+  height: 2em;
+  width: 1em;
+  border: 4px solid var(--second);
+  border-radius: 20000px;
+  margin-right: 20px;
+}
+
+.scroll .ball {
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  background: var(--second);
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+  animation: scroll 3s ease infinite;
+}
+
+@keyframes scroll {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+span {
+  color: var(--second);
+}
+
+footer {
+  margin-top: 150px;
+}
+
+.skilcontain {
+  padding-top: 100px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.skils {
+  width: 70vw;
+  align-items: center;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2em;
+}
+
+.skils .skill {
+  display: flex;
+  flex-direction: column;
+}
+
+.skils .skill img {
+  width: 25%;
+  min-width: 5em;
+  margin-bottom: -10px;
+  align-self: center;
+}
+
+.skill section {
+  text-align: center;
+}
+
+.skils h1 {
+  color: var(--second);
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+.skilcontain>h1 {
+  color: white;
+  margin-bottom: 50px;
+  font-size: 3em;
+}
+
+.skils .skill section h1 {
+  opacity: .8;
+  margin-top: 10px;
+  text-shadow: 5px 5px 0px var(--shadows);
+}
+
+.skils .first section h1 {
+  color: #1C88C7!important;
+}
+
+.skils .second section h1 {
+  color: #EF652A!important;
+}
+
+.skils .third section h1 {
+  color: #FFDE00!important;
+}
+
+.skils p {
+  margin: 0;
+  color: white;
+  opacity: .5;
+  font-size: 1em;
+}
+
+.first-cont .left .skills img {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .projects .top {
+      grid-template-columns: 1fr;
+  }
+
+  .first-cont .left {
+    justify-items: center;
+  }
+
+  .first-cont {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+  }
+  .first-cont .right img {
+    display: none;
+  }
+
+  .first-cont .left .skills img {
+    display: block;
+  }
+
+  .first-cont .left .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .first-cont .left .skills img {
+    display: none;
+  }
+  .first-cont .left .skills {
+    grid-template-columns: 1fr;
+  }
+}
